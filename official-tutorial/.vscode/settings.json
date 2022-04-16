@@ -1,3 +1,4 @@
 {
-    "python.analysis.extraPaths": ["./lib/python3.9/site-packages", "."]
+    "python.analysis.extraPaths": ["./lib/python3.9/site-packages", "./app"],
+    "livePreview.portNumber": 8000
 }
