@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo [RUN] activate python virtual environment...
+source bin/activate
+
+echo [RUN] change directory to project root...
+cd app
+
+echo [RUN] migrate django...
+python manage.py migrate
+
+echo [RUN] start server...
+gunicorn mysite.wsgi
