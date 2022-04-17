@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5_e&ypyl38k===&8fw8c806z6q=ykkp!nztx0e)k2ljfr+&zh1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','app']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','app']
 
 
 # Application definition
@@ -124,4 +124,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 ASGI_APPLICATION = 'mysite.routing.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
