@@ -4,6 +4,12 @@
 
 <main>
   <h1>Hello World</h1>
+  <h2>{{ text }}</h2>
+
+  <form action="/account/hello_world/" method="post">
+    {% csrf_token %}
+    <input type="submit">
+  </form>
 </main>
 
 {% endblock %}
