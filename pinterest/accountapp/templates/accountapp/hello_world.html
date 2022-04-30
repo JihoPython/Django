@@ -4,11 +4,19 @@
 
 <main>
   <h1>Hello World</h1>
-  <h2>{{ text }}</h2>
+
+  {% if hello_world_output %}
+  <h3>{{ hello_world_output.text }}</h3>
+  {% endif %}
 
   <form action="/account/hello_world/" method="post">
     {% csrf_token %}
-    <input type="submit">
+    <div>
+      <input type="text" name="hello_world_input">
+    </div>
+    <div>
+      <input type="submit">
+    </div>
   </form>
 </main>
 
