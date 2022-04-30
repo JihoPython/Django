@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+{% include 'head.html' %}
 <body>
-  <h1>Hello World!</h1>
+  {% include 'header.html' %}
+  {% block content %}
+  {% endblock %}
+  {% include 'footer.html' %}
+  <style>
+    body > header,
+    body > main,
+    body > footer {
+      height: 10rem;
+      background-color: #38df81;
+      border-radius: 1rem;
+      margin: 2rem
+    }
+    body > main {
+      height: 20rem;
+    }
+  </style>
 </body>
 </html>
