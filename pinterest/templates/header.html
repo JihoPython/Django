@@ -1,1 +1,30 @@
-<header></header>
+<header>
+  <h1>Pinterest</h1>
+  <nav id="global-navigator">
+    <ul>
+      <li>nav 1</li>
+      <li>nav 2</li>
+      <li>nav 3</li>
+      <li>nav 4</li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #global-navigator > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  #global-navigator li {
+    min-width: 100px;
+  }
+</style>
